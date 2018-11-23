@@ -1,0 +1,13 @@
+<h4> Type </h4><%= current_user.type %><br>
+<h4> email </h4><%= current_user.email %><br>
+<h4> Address </h4>
+<ul>
+  <% current_user.addresses.each do |add| %>
+    <li>
+      <%= add.description %>
+    </li>
+  <% end %>
+</ul>
+<h4> Image </h4>
+<span class="image"><%= image_tag current_user.picture,class: "img-fluid" %></span>
+
