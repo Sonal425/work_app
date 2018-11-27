@@ -1,0 +1,11 @@
+<div class="col-sm-4">
+  <%= form_for @job, html: {class: "form-group"} do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control"%>
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+    <%= f.label :requirements %>
+    <%= f.select :requirements, @requirements, class: "form-control" %> <br>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
